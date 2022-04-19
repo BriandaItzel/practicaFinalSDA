@@ -1,0 +1,27 @@
+<div class="container">
+<h2>{{ titulo}} </h2>
+<h1>{{ prueba }} </h1>
+
+<button class="btn btn-info" type="button"[routerLink]="['/pagos/form']">Nuevo Pago</button>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Monto Total</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Fecha Pago</th>
+        <th scope="col">Fecha Envio</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pagos of pagos">
+        
+            <th scope="row"> {{pagos.id}}  </th>
+            <td>{{pagos.monto_total}}</td>
+            <td>{{pagos.descripcion}}</td>
+            <td>{{pagos.fecha_pago}}</td>
+            <td>{{pagos.fecha_envio}}</td>
+            
+        </tr>
+      
